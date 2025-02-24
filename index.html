@@ -1,0 +1,76 @@
+<!-- Developer:  Mohammad Abo Al Ghozlan - abu lkasem - MoHG  -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTracker - Medication Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>MedTracker</h1>
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="sync-sheets" class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        <path d="M3 5c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="add-medication">
+                <button id="add-med-btn" class="primary-button">
+                    Add Medication
+                </button>
+            </div>
+
+            <div class="medications-list">
+                <!-- Medications will be inserted here -->
+            </div>
+
+            <!-- Add/Edit Medication Modal -->
+            <div id="medication-modal" class="modal">
+                <div class="modal-content">
+                    <h2 id="modal-title">Add Medication</h2>
+                    <form id="medication-form">
+                        <div class="form-group">
+                            <label for="med-name">Medication Name</label>
+                            <input type="text" id="med-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="med-time">Time</label>
+                            <input type="time" id="med-time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="med-frequency">Frequency</label>
+                            <select id="med-frequency" required>
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="secondary-button" id="cancel-modal">Cancel</button>
+                            <button type="submit" class="primary-button">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

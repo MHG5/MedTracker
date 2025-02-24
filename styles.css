@@ -1,0 +1,222 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --background: #ffffff;
+    --surface: #f3f4f6;
+    --text: #1f2937;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+    --error: #ef4444;
+    --success: #22c55e;
+}
+
+.dark {
+    --primary: #818cf8;
+    --primary-dark: #6366f1;
+    --background: #111827;
+    --surface: #1f2937;
+    --text: #f9fafb;
+    --text-secondary: #9ca3af;
+    --border: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: var(--text);
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.icon-button:hover {
+    background-color: var(--surface);
+}
+
+.icon-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.primary-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.secondary-button {
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: var(--border);
+}
+
+.add-medication {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.medications-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.medication-card {
+    background-color: var(--surface);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.medication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medication-name {
+    font-weight: 600;
+}
+
+.medication-time {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.medication-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--background);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.taken {
+    opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+    .app {
+        padding: 0.5rem;
+    }
+
+    .medication-card {
+        padding: 0.75rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}

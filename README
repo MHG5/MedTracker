@@ -1,0 +1,47 @@
+<!-- Developer:  Mohammad Abo Al Ghozlan - abu lkasem - MoHG  -->
+
+# MedTracker - Medication Reminder Web App
+
+A responsive web application to help users track and manage their medications with browser notifications and Google Sheets backup.
+
+![MedTracker Screenshot](screenshot.png)
+
+## Features
+
+- 💊 **Medication Management**
+  - Add, edit and delete medications
+  - Set medication schedules and frequencies
+  - Mark medications as taken/untaken
+  - View medication history
+
+- 🔔 **Smart Notifications**
+  - Browser notifications when it's time to take medications
+  - Customizable reminder times
+  - Works even when the browser is in background
+
+- 🌓 **Modern UI/UX**
+  - Clean, responsive design
+  - Dark/light mode support
+  - Mobile-first approach
+  - Material Design inspired components
+
+- 💾 **Data Persistence**
+  - Local storage for offline access
+  - Google Sheets integration for backup
+  - Real-time data synchronization
+  - Multi-device support
+
+## Getting Started
+
+### Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A Google account (for Sheets integration)
+- Basic knowledge of HTML/CSS/JavaScript
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MHG5/MedTracker.git
+   cd medtracker
