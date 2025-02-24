@@ -1,0 +1,8 @@
+{
+  "name": "MedTracker - Medication Reminder Web App",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "short_name": "MedTracker",
+  "id": "MedTracker",
+  "description": "MedTracker - Medication Reminder Web App"
+}
